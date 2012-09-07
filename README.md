@@ -18,7 +18,8 @@ GET HTTP requests
 -----------------
 
 The script can either be used with the provided form (index.php) or images can be
-generated directly using a HTTP request with the following parameters:
+generated directly using a GET request to the script (logo.php) with the following
+parameters:
 
 <table>
 	<tr>
@@ -90,6 +91,10 @@ generated directly using a HTTP request with the following parameters:
 </table>
 
 \* Either `maxwidth` or `maxheight` must be set, or both.
+
+### Example
+
+http://bartvanmerrienboer.nl/tedxlogo/logo.php?eventname=Warwick&color=white&tagline=2&eventline=2&maxwidth=500&border=10&square=true&format=png32
 
 Working
 -------
