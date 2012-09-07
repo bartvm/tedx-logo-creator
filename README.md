@@ -28,30 +28,68 @@ generated directly using a HTTP request with the following parameters:
 		<th>Comments</th>
 	</tr>
 	<tr>
-		<td>`eventname`</td>
+		<td><code>eventname</code></td>
 		<td>Required</td>
-		<td>`string`</td>
+		<td><code>string</code></td>
 		<td>URL encoded</td>
 	</tr>
 	<tr>
-		<td>color</td>
+		<td><code>color</code></td>
 		<td>Required</td>
-		<td>`black` or `white`</td>
+		<td><code>black</code> or <code>white</code></td>
 		<td>Color of the letters; not the background.</td>
 	</tr>
 	<tr>
-		<td>`transparency`</td>
+		<td><code>transparency</code></td>
 		<td>Optional</td>
-		<td>`true` or `false`</td>
+		<td><code>true</code> or <code>false</code></td>
 		<td></td>
 	</tr>
 	<tr>
-		<td>`tagline`</td>
+		<td><code>tagline</code></td>
 		<td>Required</td>
-		<td>`1` or `2`</td>
-		<td>`1` for a one-line tagline, `2` for the two-line version</td>
+		<td><code>1</code> or <code>2</code></td>
+		<td><code>1</code> for a one-line tagline, <code>2</code> for the two-line version</td>
+	</tr>
+	<tr>
+		<td><code>eventline</code></td>
+		<td>Required</td>
+		<td><code>1</code> or <code>2</code></td>
+		<td><code>1</code> for the event name on the same line, <code>2</code> for on a separate line</td>
+	</tr>
+	<tr>
+		<td><code>maxwidth</code></td>
+		<td>Optional*</td>
+		<td><code>numeric</code></td>
+		<td>Maximum width of the image in pixels, must be positive.</td>
+	</tr>
+	<tr>
+		<td><code>maxheight</code></td>
+		<td>Optional*</td>
+		<td><code>numeric</code></td>
+		<td>Maximum height of the image in pixels, must be positive.</td>
+	</tr>	
+		<tr>
+		<td><code>border</code></td>
+		<td>Required</td>
+		<td><code>numeric</code></td>
+		<td>Clear space around the logo in pixels, must be non-negative.</td>
+	</tr>
+	<tr>
+		<td><code>square</code></td>
+		<td>Optional</td>
+		<td><code>true</code> or <code>false</code></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><code>format</code></td>
+		<td>Required</td>
+		<td><code>png32</code> or <code>jpeg</code></td>
+		<td>JPEG can only be chosen without a transparent background.</td>
 	</tr>
 </table>
+
+\* Either `maxwidth` or `maxheight` must be set, or both.
 
 Working
 -------
@@ -73,5 +111,5 @@ Requirements
 Credits
 -------
 
-This TEDx logo creator was inspired by Yongho Shin's and Brian Alexander's PHP script
+This script was inspired by Yongho Shin's and Brian Alexander's PHP script
 (http://www.tedx-sandiego.com/creator/).
